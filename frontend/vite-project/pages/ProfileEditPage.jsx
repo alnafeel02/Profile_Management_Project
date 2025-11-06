@@ -55,7 +55,7 @@ export default function ProfileEditPage() {
     if (formData.avatarFile) data.append("avatar", formData.avatarFile);
 
     try {
-      await API.put(`/users/${id}`, data, {
+      await API.put(`/api/users/${id}`, data, {
         headers: { "Content-Type": "multipart/form-data" }
       });
       navigate(`/profile/${id}`);

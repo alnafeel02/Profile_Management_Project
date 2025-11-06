@@ -17,7 +17,7 @@ export default function ProfileViewPage() {
         setError("");
 
      
-        const res = await API.get(`/users/${id}`);
+        const res = await API.get(`/api/users/${id}`);
         setUser(res.data);
       } catch (err) {
         console.error("Error fetching user profile:", err);

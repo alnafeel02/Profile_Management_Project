@@ -36,7 +36,7 @@ const CreateProfile = () => {
     if (avatar) data.append("avatar", avatar);
 
     try {
-      const res = await API.post("/users", data, {
+      const res = await API.post("/api/users", data, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
