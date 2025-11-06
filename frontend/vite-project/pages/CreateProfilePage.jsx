@@ -44,10 +44,7 @@ const CreateProfile = () => {
       console.log("Created Profile:", createdUser);
       setMessage("Profile created successfully!");
       localStorage.setItem("userId", createdUser._id);
-      
-      setTimeOut(() => {
-          navigate(`/profile/${createdUser._id}`);
-      },1000)
+      navigate(`/profile/${createdUser._id}`);
     } catch (err) {
       console.error(err);
       setMessage("Error creating profile");
