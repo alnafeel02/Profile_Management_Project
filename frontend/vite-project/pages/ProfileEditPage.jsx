@@ -63,6 +63,10 @@ export default function ProfileEditPage() {
       console.error("Update failed", err);
     }
   };
+  
+  const handleBack = () => {
+    navigate(-1);
+  };
 
   return (
     <div className="max-w-2xl mx-auto p-4">
@@ -130,6 +134,10 @@ export default function ProfileEditPage() {
         >
           Save Profile
         </button>
+          <button onClick={handleBack} className="mb-4 bg-gray-200 text-gray-800 px-4 py-2 rounded hover:bg-gray-300" >
+         Back
+      </button>
+
       </form>
     </div>
   );
