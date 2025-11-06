@@ -1,7 +1,7 @@
 // src/pages/LandingPage.jsx
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import API from "../services/api";
+
 
 export default function LandingPage() {
   const navigate = useNavigate();

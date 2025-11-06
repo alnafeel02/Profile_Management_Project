@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import API from "../services/api"; 
+import api from "../services/api"; 
 import { useNavigate } from "react-router-dom";
 
 const CreateProfile = () => {
@@ -36,7 +36,7 @@ const CreateProfile = () => {
     if (avatar) data.append("avatar", avatar);
 
     try {
-      const res = await API.post("/api/users", data, {
+      const res = await api.post("/api/users", data, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 

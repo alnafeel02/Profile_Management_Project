@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import API from "../services/api";
+import api from "../services/api";
 
 export default function ProfileEditPage() {
   const { id } = useParams();
@@ -55,7 +55,7 @@ export default function ProfileEditPage() {
     if (formData.avatarFile) data.append("avatar", formData.avatarFile);
 
     try {
-      await API.put(`/api/users/${id}`, data, {
+      await api.put(`/api/users/${id}`, data, {
         headers: { "Content-Type": "multipart/form-data" }
       });
       navigate(`/profile/${id}`);

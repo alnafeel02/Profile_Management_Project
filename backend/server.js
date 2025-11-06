@@ -19,7 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 
 connectDB();
 app.get("/", (req, res) => {
-  res.send("✅ Backend is running successfully!");
+  res.send("Backend is running successfully!");
 });
 
 app.use("/api/users", userRoutes);

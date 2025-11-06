@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import API from "../services/api";
+import api from "../services/api";
 
 export default function ProfileViewPage() {
   const { id } = useParams();
@@ -17,7 +17,7 @@ export default function ProfileViewPage() {
         setError("");
 
      
-        const res = await API.get(`/api/users/${id}`);
+        const res = await api.get(`/api/users/${id}`);
         setUser(res.data);
       } catch (err) {
         console.error("Error fetching user profile:", err);
