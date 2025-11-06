@@ -18,7 +18,7 @@ export default function ProfileEditPage() {
   useEffect(() => {
     const getUser = async () => {
       try {
-        const res = await api.get(`/users/${id}`);
+        const res = await api.get(`/api/users/${id}`);
         const u = res.data;
         setFormData({
           name: u.name,
