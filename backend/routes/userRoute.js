@@ -6,10 +6,10 @@ const {
   createProfile,
 } = require("../controller/userController");
 const multer = require("multer");
-const upload = multer({ dest: "uploads/" }); // or better use multer-storage-cloudinary
+const upload = multer({ dest: "uploads/" }); 
 
 // routes/userRoutes.js
-router.post('/', upload.single("avatar"), createProfile);  // upload.none() if no avatar at creation
+router.post('/', upload.single("avatar"), createProfile);  
 router.get("/:id", getProfile);
 router.put("/:id", upload.single("avatar"), updateProfile);
 
